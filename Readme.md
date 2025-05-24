@@ -15,6 +15,20 @@ bash Install.sh
 ```
 
 <h1>Utilisation</h1>
+Pour utiliser EpiToolBox, il suffit de lancer le script principal :
+
+```bash
+bash EpiToolBox.sh
+```
+Et en suite choisissez vos outils ! <br>
+
+<h1>Outils/Fonctionalitées</h1>
+
+> [!NOTE]
+> A venir...
 
 <h1>Remerciements</h1>
 Thanks to Kkrypt0nn and the community for all the wordlist <br>
+
+<h1>Contributeurs</h1>
+- Aldbg74 aka Alexis.D
