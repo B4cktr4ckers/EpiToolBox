@@ -15,7 +15,7 @@ ___ ___________      ._____________           .__ __________                   _
 < <   |        \  |_> >  | |    |(  <_> |  <_> )  |_|    |   (  <_> >    <       > >
 / /  /_______  /   __/|__| |____| \____/ \____/|____/______  /\____/__/\_ \ /\   \ \
 \_\_         \/|__|                                        \/            \/ \/  _/_/
-             CyberSec Toolbox 🧰
+             B4CKTR4CK3RS CyberSec Toolbox 🧰
 EOF
 echo -e "${CYAN}Bienvenue dans ta boîte à outils cybersécurité${NC}"
 }
