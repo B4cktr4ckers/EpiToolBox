@@ -15,12 +15,11 @@ ___ ___________      ._____________           .__ __________                   _
 < <   |        \  |_> >  | |    |(  <_> |  <_> )  |_|    |   (  <_> >    <       > >
 / /  /_______  /   __/|__| |____| \____/ \____/|____/______  /\____/__/\_ \ /\   \ \
 \_\_         \/|__|                                        \/            \/ \/  _/_/
-             B4CKTR4CK3RS CyberSec Toolbox 🧰
+--------------------------B4CKTR4CK3RS CyberSec Toolbox 🧰--------------------------
 EOF
 echo -e "${CYAN}Bienvenue dans ta boîte à outils cybersécurité${NC}"
 }
 
-# Menu principal
 function main_menu() {
     clear
     show_banner
@@ -43,8 +42,6 @@ function main_menu() {
         *) echo -e "${RED}Choix invalide.${NC}" ; sleep 2 ; main_menu ;;
     esac
 }
-
-# Sous-menus
 
 function recon_menu() {
     clear
