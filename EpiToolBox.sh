@@ -121,10 +121,14 @@ function exploit_menu() {
 }
 
 function about() {
-  clear
-  echo -e "${CYAN}[---About---]${NC}"
-  echo "EpiToolBox is a project for epitech cybersecurity project"
-  echo "The aim of the project is to give student a"
+    clear
+    echo -e "${CYAN}[---About---]${NC}"
+    echo "EpiToolBox is a project for epitech cybersecurity project"
+    echo "The aim of the project is to give student a software with tool"
+    echo "For all the Epitech cyber modules"
+    echo " "
+    echo "Made by :"
+    echo "Alexis.D"
 }
 
 
