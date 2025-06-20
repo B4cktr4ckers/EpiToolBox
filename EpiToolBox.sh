@@ -17,20 +17,21 @@ ___ ___________      ._____________           .__ __________                   _
 \_\_         \/|__|                                        \/            \/ \/  _/_/
 --------------------------B4CKTR4CK3RS CyberSec Toolbox 🧰--------------------------
 EOF
-echo -e "${CYAN}Bienvenue dans ta boîte à outils cybersécurité${NC}"
+echo -e "${CYAN}Welcome to the B4CKTR4CK3RS Cybersec toolbox${NC}"
 }
 
 function main_menu() {
     clear
     show_banner
-    echo -e "${GREEN}[1] Reconnaissance"
+    echo -e "${GREEN}[1] Recon"
     echo -e "[2] Bruteforce"
     echo -e "[3] Analyse PDF"
     echo -e "[4] OSINT"
     echo -e "[5] Exploitation"
-    echo -e "[6] Quitter${NC}"
+    echo -e "[6] About"
+    echo -e "[7] Quit${NC}"
     echo ""
-    read -p ">> Choix : " choice
+    read -p ">> Choice : " choice
 
     case $choice in
         1) recon_menu ;;
@@ -38,18 +39,19 @@ function main_menu() {
         3) pdf_menu ;;
         4) osint_menu ;;
         5) exploit_menu ;;
-        6) exit 0 ;;
-        *) echo -e "${RED}Choix invalide.${NC}" ; sleep 2 ; main_menu ;;
+        6) about;;
+        7) exit 0 ;;
+        *) echo -e "${RED}Invalide Choice.${NC}" ; sleep 2 ; main_menu ;;
     esac
 }
 
 function recon_menu() {
     clear
-    echo -e "${CYAN}[ Reconnaissance ]${NC}"
+    echo -e "${CYAN}[ Recon ]${NC}"
     echo "1. Nmap"
     echo "2. Whois"
     echo "3. DNSenum (à ajouter si voulu)"
-    echo "0. Retour"
+    echo "0. Return"
     read -p ">> " opt
     case $opt in
         1) read -p "Cible : " tgt; nmap -A "$tgt" ;;
@@ -65,7 +67,7 @@ function brute_menu() {
     echo -e "${CYAN}[ Bruteforce ]${NC}"
     echo "1. Hydra (FTP)"
     echo "2. Medusa (FTP)"
-    echo "0. Retour"
+    echo "0. Return"
     read -p ">> " opt
     case $opt in
         1) read -p "IP : " ip; read -p "User : " user; hydra -l "$user" -P /usr/share/wordlists/rockyou.txt ftp://"$ip" ;;
@@ -79,8 +81,8 @@ function brute_menu() {
 function pdf_menu() {
     clear
     echo -e "${CYAN}[ Analyse PDF ]${NC}"
-    echo "1. Extraire info avec pdftk"
-    echo "0. Retour"
+    echo "1. Extact data with pdftk"
+    echo "0. Return"
     read -p ">> " opt
     case $opt in
         1) read -p "Fichier PDF : " file; pdftk "$file" dump_data ;;
@@ -94,7 +96,7 @@ function osint_menu() {
     clear
     echo -e "${CYAN}[ OSINT ]${NC}"
     echo "1. theHarvester"
-    echo "0. Retour"
+    echo "0. Return"
     read -p ">> " opt
     case $opt in
         1) read -p "Domaine/email : " tgt; theHarvester -d "$tgt" -b google ;;
@@ -107,8 +109,8 @@ function osint_menu() {
 function exploit_menu() {
     clear
     echo -e "${CYAN}[ Exploitation ]${NC}"
-    echo "1. Lancer Metasploit"
-    echo "0. Retour"
+    echo "1. Launch Metasploit"
+    echo "0. Return"
     read -p ">> " opt
     case $opt in
         1) msfconsole ;;
@@ -118,8 +120,16 @@ function exploit_menu() {
     pause
 }
 
+function about() {
+  clear
+  echo -e "${CYAN}[---About---]${NC}"
+  echo "EpiToolBox is a project for epitech cybersecurity project"
+  echo "The aim of the project is to give student a"
+}
+
+
 function pause() {
-    read -p "Appuie sur Entrée pour revenir au menu..."
+    read -p "Press enter to get back to the start..."
     main_menu
 }
 
